@@ -28,6 +28,7 @@ sub default_for {
     require Carp;
     Carp::croak( sprintf q[Calling class %s cannot "has". Did you forget to "use Moo"?], $target, );
   }
+
   # Calling '->has()' directly of course doesn't work, because it doesn't expect
   # $_[0] to be a class, but the attribute name.
   #
