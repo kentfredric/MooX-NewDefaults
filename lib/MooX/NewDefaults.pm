@@ -2,33 +2,37 @@ package MooX::NewDefaults;
 
 # ABSTRACT: Alter attribute defaults with less pain
 
-use parent 'Moo';
+use Sub::Exporter::Progressive -setup => {
+  exports => [qw( default_for )],
+  groups  => {
+    default => [qw( default_for )]
+  }
+};
 
-sub import {
-  my $target = caller;
-  my $class  = shift;
-  Moo::_install_tracked $target => default_for => sub {
-    my $name_proto = shift;
-    my @name_proto = ref $name_proto eq 'ARRAY' ? @$name_proto : $name_proto;
-    if ( @_ != 1 ) {
-      require Carp;
-      Carp::croak(
-        sprintf q[Invalid options for %s default: Single argument expected, got %s],
-        join( ', ', map "'$_'", @name_proto ),
-        scalar @_
-      );
-    }
-    my %spec = ( default => ( shift @_ ) );
-    foreach my $name ( map { '+' . $_ } @name_proto ) {
+sub default_for {
+  my $target     = caller;
+  my $name_proto = shift;
 
-      # Note that when multiple attributes specified, each attribute
-      # needs a separate \%specs hashref
-      my $spec_ref = @name_proto > 1 ? +{%spec} : \%spec;
-      $class->_constructor_maker_for($target)->register_attribute_specs( $name, $spec_ref );
-      $class->_accessor_maker_for($target)->generate_method( $target, $name, $spec_ref );
-      $class->_maybe_reset_handlemoose($target);
-    }
-  };
+  my (@name_proto) = ref $name_proto eq 'ARRAY' ? @$name_proto : $name_proto;
+
+  if ( @_ != 1 ) {
+    require Carp;
+    Carp::croak(
+      sprintf q[Invalid options for %s default: Single argument expected, got %s],
+      join( ', ', map "'$_'", @name_proto ),
+      scalar @_
+    );
+  }
+  my $coderef;
+  if ( not $coderef = $target->can('has') ) {
+    require Carp;
+    Carp::croak( sprintf q[Calling class %s cannot "has". Did you forget to "use Moo"?], $target, );
+  }
+  # Calling '->has()' directly of course doesn't work, because it doesn't expect
+  # $_[0] to be a class, but the attribute name.
+  #
+  # The class itself is baked into $target::has during `use Moo`
+  return $coderef->( [ map { "+$_" } @name_proto ], default => @_ );
 }
 
 1;
