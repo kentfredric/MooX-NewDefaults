@@ -1,50 +1,53 @@
-package MooseX::NewDefaults;
+package MooX::NewDefaults;
 
 # ABSTRACT: Alter attribute defaults with less pain
 
-use Moose 0.94 ();
-use namespace::autoclean;
-use Moose::Exporter;
-use Moose::Util;
+use parent 'Moo';
 
-sub default_for {
-    my ($meta, $attribute_name, $new_default) = (shift, shift, shift);
+sub import {
+  my $target = caller;
+  my $class  = shift;
+  Moo::_install_tracked $target => default_for => sub {
+    my $name_proto = shift;
+    my @name_proto = ref $name_proto eq 'ARRAY' ? @$name_proto : $name_proto;
+    if ( @_ != 1 ) {
+      require Carp;
+      Carp::croak(
+        sprintf q[Invalid options for %s default: Single argument expected, got %s],
+        join( ', ', map "'$_'", @name_proto ),
+        scalar @_
+      );
+    }
+    my %spec = ( default => ( shift @_ ) );
+    foreach my $name ( map { '+' . $_ } @name_proto ) {
 
-    # yes, Moose::Role will explode letting the caller know that roles don't
-    # currently support attribute extension... but that's M::R's problem, not
-    # ours :)
-
-    my $sub
-       = $meta->isa('Moose::Meta::Role')
-       ? \&Moose::Role::has
-       : \&Moose::has
-       ;
-
-    # massage into what has() expects
-    @_ = ($meta, "+$attribute_name", default => $new_default);
-    goto \&$sub;
-    return;
+      # Note that when multiple attributes specified, each attribute
+      # needs a separate \%specs hashref
+      my $spec_ref = @name_proto > 1 ? +{%spec} : \%spec;
+      $class->_constructor_maker_for($target)->register_attribute_specs( $name, $spec_ref );
+      $class->_accessor_maker_for($target)->generate_method( $target, $name, $spec_ref );
+      $class->_maybe_reset_handlemoose($target);
+    }
+  };
 }
 
-Moose::Exporter->setup_import_methods(with_meta => [ qw{ default_for } ]);
-
-!!42;
+1;
 
 __END__
 
 =head1 SYNOPSIS
 
+Concept and documentation liberally stolen from L<< C<MooseX::NewDefaults>|MooseX::NewDefaults >>
+
     package One;
-    use Moose;
-    use namespace::autoclean;
+    use Moo;
 
     has A => (is => 'ro', default => sub { 'say ahhh' });
     has B => (is => 'ro', default => sub { 'say whoo' });
 
     package Two;
-    use Moose;
-    use namespace::autoclean;
-    use MooseX::NewDefaults;
+    use Moo;
+    use MooX::NewDefaults;
 
     extends 'One';
 
