@@ -18,17 +18,17 @@ use Sub::Exporter::Progressive -setup => {
 };
 
 sub default_for {
-  my $target     = caller;
-  my $name_proto = shift;
+  my ( $name_proto, @args ) = @_;
+  my $target = caller;
 
   my (@name_proto) = ref $name_proto eq 'ARRAY' ? @$name_proto : $name_proto;
 
-  if ( @_ != 1 ) {
+  if ( @args != 1 ) {
     require Carp;
     Carp::croak(
       sprintf q[Invalid options for %s default: Single argument expected, got %s],
       join( ', ', map { "'$_'" } @name_proto ),
-      scalar @_,
+      scalar @args,
     );
   }
   my $coderef;
@@ -41,7 +41,7 @@ sub default_for {
   # $_[0] to be a class, but the attribute name.
   #
   # The class itself is baked into $target::has during `use Moo`
-  return $coderef->( [ map { "+$_" } @name_proto ], default => @_ );
+  return $coderef->( [ map { "+$_" } @name_proto ], default => @args );
 }
 
 1;
