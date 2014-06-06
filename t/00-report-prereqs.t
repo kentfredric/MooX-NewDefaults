@@ -111,7 +111,9 @@ my $static_prereqs = do { my $x = {
                       'requires' => {
                                       'Carp' => '0',
                                       'Sub::Exporter::Progressive' => '0',
-                                      'perl' => '5.006'
+                                      'perl' => '5.008',
+                                      'strict' => '0',
+                                      'warnings' => '0'
                                     }
                     },
        'test' => {
@@ -128,9 +130,7 @@ my $static_prereqs = do { my $x = {
                                    'Moo' => '0',
                                    'Test::More' => '0.89',
                                    'TestClassA' => '0',
-                                   'strict' => '0',
-                                   'version' => '0',
-                                   'warnings' => '0'
+                                   'version' => '0'
                                  }
                  }
      };

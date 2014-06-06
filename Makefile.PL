@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use 5.006;
+use 5.008;
 
 use ExtUtils::MakeMaker 6.30;
 
@@ -21,7 +21,9 @@ my %WriteMakefileArgs = (
   "NAME" => "MooX::NewDefaults",
   "PREREQ_PM" => {
     "Carp" => 0,
-    "Sub::Exporter::Progressive" => 0
+    "Sub::Exporter::Progressive" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
@@ -30,9 +32,7 @@ my %WriteMakefileArgs = (
     "Moo" => 0,
     "Test::More" => "0.89",
     "TestClassA" => 0,
-    "strict" => 0,
-    "version" => 0,
-    "warnings" => 0
+    "version" => 0
   },
   "VERSION" => "0.001000",
   "test" => {
