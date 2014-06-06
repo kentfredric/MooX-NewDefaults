@@ -13,8 +13,8 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 use Sub::Exporter::Progressive -setup => {
   exports => [qw( default_for )],
   groups  => {
-    default => [qw( default_for )]
-  }
+    default => [qw( default_for )],
+  },
 };
 
 sub default_for {
@@ -27,8 +27,8 @@ sub default_for {
     require Carp;
     Carp::croak(
       sprintf q[Invalid options for %s default: Single argument expected, got %s],
-      join( ', ', map "'$_'", @name_proto ),
-      scalar @_
+      join( ', ', map { "'$_'" } @name_proto ),
+      scalar @_,
     );
   }
   my $coderef;
