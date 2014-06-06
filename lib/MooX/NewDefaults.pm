@@ -1,5 +1,7 @@
 package MooX::NewDefaults;
 
+our $VERSION = '0.001000';
+
 # ABSTRACT: Alter attribute defaults with less pain
 
 use Sub::Exporter::Progressive -setup => {
