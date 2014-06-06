@@ -27,7 +27,7 @@ sub default_for {
     require Carp;
     Carp::croak(
       sprintf q[Invalid options for %s default: Single argument expected, got %s],
-      join( ', ', map "'$_'", @name_proto ),
+      join( ', ', map { "'$_'" } @name_proto ),
       scalar @_,
     );
   }
