@@ -8,6 +8,8 @@ our $VERSION = '0.001000';
 
 # ABSTRACT: Alter attribute defaults with less pain
 
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
 use Sub::Exporter::Progressive -setup => {
   exports => [qw( default_for )],
   groups  => {

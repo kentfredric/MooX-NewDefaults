@@ -1,6 +1,6 @@
 Revision history for MooX-NewDefaults
 
-0.001000 2014-06-06T14:09:51Z
+0.001000 2014-06-06T14:53:49Z
  - Initial release
  - Code inspired / API compatible with MooseX::NewDefaults
  - Docs and some tests stolen there.
