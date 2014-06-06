@@ -1,0 +1,8 @@
+Revision history for MooX-NewDefaults
+
+0.001000 2014-06-06T15:02:57Z
+ - Initial release
+ - Code inspired / API compatible with MooseX::NewDefaults
+ - Docs and some tests stolen there.
+ - Copyright assigned there too because #yolo
+
