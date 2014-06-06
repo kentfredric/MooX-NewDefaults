@@ -16,4 +16,4 @@ META.yml
 MYMETA.*
 .build
 releases/
-MooseX-NewDefaults-*
+MooX-NewDefaults-*

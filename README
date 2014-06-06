@@ -34,7 +34,7 @@ DESCRIPTION
     That's where we come in.
 
     This package introduces new sugar that you can use in your class,
-    default_for (as seen above).
+    "default_for" (as seen above).
 
     e.g.
 
