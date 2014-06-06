@@ -20,7 +20,7 @@ use Test::More;
 
   use MooX::NewDefaults;
 
-  extends '' . 'TestClassA';
+  extends @{[ 'TestClassA']};
 
   default_for one => 'new default!';
 }

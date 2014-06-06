@@ -129,7 +129,6 @@ my $static_prereqs = do { my $x = {
                                    'List::Util' => '0',
                                    'Moo' => '0',
                                    'Test::More' => '0.89',
-                                   'TestClassA' => '0',
                                    'version' => '0'
                                  }
                  }

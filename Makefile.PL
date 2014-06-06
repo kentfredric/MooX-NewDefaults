@@ -31,7 +31,6 @@ my %WriteMakefileArgs = (
     "List::Util" => 0,
     "Moo" => 0,
     "Test::More" => "0.89",
-    "TestClassA" => 0,
     "version" => 0
   },
   "VERSION" => "0.001000",
@@ -49,7 +48,6 @@ my %FallbackPrereqs = (
   "Moo" => 0,
   "Sub::Exporter::Progressive" => 0,
   "Test::More" => "0.89",
-  "TestClassA" => 0,
   "strict" => 0,
   "version" => 0,
   "warnings" => 0
