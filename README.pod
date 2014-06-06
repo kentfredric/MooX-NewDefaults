@@ -1,30 +1,28 @@
 =pod
 
-=encoding utf-8
-
-=for :stopwords Chris Weyl
+=encoding UTF-8
 
 =head1 NAME
 
-MooseX::NewDefaults - Alter attribute defaults with less pain
+MooX::NewDefaults - Alter attribute defaults with less pain
 
 =head1 VERSION
 
-This document describes version 0.004 of MooseX::NewDefaults - released September 24, 2012 as part of MooseX-NewDefaults.
+version 0.001000
 
 =head1 SYNOPSIS
 
+Concept and documentation liberally stolen from L<< C<MooseX::NewDefaults>|MooseX::NewDefaults >>
+
     package One;
-    use Moose;
-    use namespace::autoclean;
+    use Moo;
 
     has A => (is => 'ro', default => sub { 'say ahhh' });
     has B => (is => 'ro', default => sub { 'say whoo' });
 
     package Two;
-    use Moose;
-    use namespace::autoclean;
-    use MooseX::NewDefaults;
+    use Moo;
+    use MooX::NewDefaults;
 
     extends 'One';
 
@@ -68,23 +66,19 @@ this default value may be any legal value for default options.
 
     has '+bar' => (default => 'new default');
 
-=head1 SOURCE
+=head1 AUTHORS
 
-The development version is on github at L<http://github.com/RsrchBoy/moosex-newdefaults>
-and may be cloned from L<git://github.com/RsrchBoy/moosex-newdefaults.git>
+=over 4
 
-=head1 BUGS
+=item *
 
-Please report any bugs or feature requests on the bugtracker website
-https://github.com/RsrchBoy/moosex-newdefaults/issues
+Kent Fredric <kentnl@cpan.org>
 
-When submitting a bug or request, please include a test-file or a
-patch to an existing test-file that illustrates the bug or desired
-feature.
-
-=head1 AUTHOR
+=item *
 
 Chris Weyl <cweyl@alumni.drew.edu>
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 
@@ -94,3 +88,4 @@ This is free software, licensed under:
 
   The GNU Lesser General Public License, Version 2.1, February 1999
 
+=cut
