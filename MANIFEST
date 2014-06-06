@@ -30,6 +30,8 @@ maint-travis-ci/travis_enable.pl
 maint-travis-ci/yamls/sterile.mkdn
 maint-travis-ci/yamls/sterile.yaml
 maint-travis-ci/yamls/sterile2.yaml
+maint/perlcritic.rc.gen.pl
+misc/perlcritic.deps
 perlcritic.rc
 t/00-compile/lib_MooX_NewDefaults_pm.t
 t/00-report-prereqs.t
