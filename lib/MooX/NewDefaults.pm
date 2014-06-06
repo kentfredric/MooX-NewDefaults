@@ -21,7 +21,7 @@ sub default_for {
   my ( $name_proto, @args ) = @_;
   my $target = caller;
 
-  my (@name_proto) = 'ARRAY' eq ref $name_proto ? @$name_proto : $name_proto;
+  my (@name_proto) = 'ARRAY' eq ref $name_proto ? @{$name_proto} : $name_proto;
 
   if ( @args != 1 ) {
     require Carp;
