@@ -18,7 +18,7 @@ use Test::More;
   package TestClassB;
   use Moo;
 
-  extends @{['TestClassA']};
+  extends @{ ['TestClassA'] };
 
   sub one { 'new default!' }
 }
