@@ -1,3 +1,7 @@
+use 5.008;
+use strict;
+use warnings;
+
 package MooX::NewDefaults;
 
 our $VERSION = '0.001000';
