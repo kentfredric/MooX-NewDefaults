@@ -35,14 +35,14 @@ Concept and documentation liberally stolen from L<< C<MooseX::NewDefaults>|Moose
 =head1 DESCRIPTION
 
 Ever start using a package from the CPAN, only to discover that it requires
-lots of subclassing and "has '+foo' => (default => ...)"?  It's not
+lots of subclassing and C<< has '+foo' => (default => ...) >>?  It's not
 recommended Moose best practice, and it's certainly not the prettiest thing
 ever, either.
 
 That's where we come in.
 
 This package introduces new sugar that you can use in your class,
-default_for (as seen above).
+C<< default_for >> (as seen above).
 
 e.g.
 
