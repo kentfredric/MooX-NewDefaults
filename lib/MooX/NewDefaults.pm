@@ -18,8 +18,8 @@ use Sub::Exporter::Progressive -setup => {
 };
 
 sub default_for {
-  my $target     = caller;
-  my ($name_proto,@args) = @_;
+  my ( $name_proto, @args ) = @_;
+  my $target = caller;
 
   my (@name_proto) = ref $name_proto eq 'ARRAY' ? @$name_proto : $name_proto;
 
