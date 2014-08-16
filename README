@@ -2,7 +2,7 @@ NAME
     MooX::NewDefaults - Alter attribute defaults with less pain
 
 VERSION
-    version 0.001000
+    version 0.001001
 
 SYNOPSIS
     Concept and documentation liberally stolen from "MooseX::NewDefaults"
@@ -62,7 +62,8 @@ AUTHORS
     *   Chris Weyl <cweyl@alumni.drew.edu>
 
 COPYRIGHT AND LICENSE
-    This software is Copyright (c) 2011 by Chris Weyl.
+    This software is Copyright (c) 2011 by Chris Weyl
+    <cweyl@alumni.drew.edu>.
 
     This is free software, licensed under:
 
