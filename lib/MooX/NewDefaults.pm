@@ -132,7 +132,7 @@ Chris Weyl <cweyl@alumni.drew.edu>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2011 by Chris Weyl.
+This software is Copyright (c) 2011 by Chris Weyl <cweyl@alumni.drew.edu>.
 
 This is free software, licensed under:
 
