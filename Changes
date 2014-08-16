@@ -13,6 +13,9 @@ Revision history for MooX-NewDefaults
  - develop: +1 ↑1 (suggests: ↑2)
  - test: +1 -3 (recommends: ↑1 -1)
 
+ [Tests]
+ - update Test::ReportPrereqs Tests
+
 0.001000 2014-06-06T15:02:57Z
  - Initial release
  - Code inspired / API compatible with MooseX::NewDefaults
