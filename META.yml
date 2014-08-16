@@ -20,7 +20,7 @@ name: MooX-NewDefaults
 provides:
   MooX::NewDefaults:
     file: lib/MooX/NewDefaults.pm
-    version: '0.001001'
+    version: '0.001002'
 requires:
   Carp: '0'
   Sub::Exporter::Progressive: '0'
@@ -31,7 +31,7 @@ resources:
   bugtracker: https://github.com/kentnl/MooX-NewDefaults/issues
   homepage: https://github.com/kentnl/MooX-NewDefaults
   repository: https://github.com/kentnl/MooX-NewDefaults.git
-version: '0.001001'
+version: '0.001002'
 x_BuiltWith:
   modules:
     CPAN::Meta: '2.142060'
@@ -83,7 +83,7 @@ x_BuiltWith:
     Dist::Zilla::PluginBundle::Author::KENTNL: '2.017002'
     ExtUtils::MakeMaker: '6.98'
     File::Spec: '3.48'
-    Moo: '1.005000'
+    Moo: '1.006000'
     Pod::Coverage::TrustPod: '0.100003'
     Sub::Exporter::Progressive: '0.001011'
     Test::CPAN::Changes: '0.30'
@@ -424,7 +424,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: '0'
-          tag: 0.001001-source
+          tag: 0.001002-source
           tag_format: '%v-source'
           tag_message: v%v
           time_zone: local
@@ -478,7 +478,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: releases
           signed: '0'
-          tag: '0.001001'
+          tag: '0.001002'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local
