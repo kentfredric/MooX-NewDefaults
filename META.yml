@@ -28,9 +28,9 @@ requires:
   strict: '0'
   warnings: '0'
 resources:
-  bugtracker: https://github.com/kentfredric/MooX-NewDefaults/issues
-  homepage: https://github.com/kentfredric/MooX-NewDefaults
-  repository: https://github.com/kentfredric/MooX-NewDefaults.git
+  bugtracker: https://github.com/kentnl/MooX-NewDefaults/issues
+  homepage: https://github.com/kentnl/MooX-NewDefaults
+  repository: https://github.com/kentnl/MooX-NewDefaults.git
 version: '0.001001'
 x_BuiltWith:
   modules:

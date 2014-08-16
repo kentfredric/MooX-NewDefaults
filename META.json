@@ -112,13 +112,13 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/kentfredric/MooX-NewDefaults/issues"
+         "web" : "https://github.com/kentnl/MooX-NewDefaults/issues"
       },
-      "homepage" : "https://github.com/kentfredric/MooX-NewDefaults",
+      "homepage" : "https://github.com/kentnl/MooX-NewDefaults",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/kentfredric/MooX-NewDefaults.git",
-         "web" : "https://github.com/kentfredric/MooX-NewDefaults"
+         "url" : "https://github.com/kentnl/MooX-NewDefaults.git",
+         "web" : "https://github.com/kentnl/MooX-NewDefaults"
       }
    },
    "version" : "0.001001",
