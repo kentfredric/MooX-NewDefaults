@@ -64,7 +64,7 @@ x_BuiltWith:
     Dist::Zilla::Plugin::MinimumPerl: '1.003'
     Dist::Zilla::Plugin::PodCoverageTests: '5.020'
     Dist::Zilla::Plugin::PodSyntaxTests: '5.020'
-    Dist::Zilla::Plugin::PodWeaver: '4.005'
+    Dist::Zilla::Plugin::PodWeaver: '4.006'
     Dist::Zilla::Plugin::Prereqs: '5.020'
     Dist::Zilla::Plugin::Prereqs::Recommend::MatchInstalled: '0.002001'
     Dist::Zilla::Plugin::ReadmeAnyFromPod: '0.142250'
@@ -331,7 +331,7 @@ x_Dist_Zilla:
               name: Legal
               version: '4.006'
       name: '@Author::KENTNL/PodWeaver'
-      version: '4.005'
+      version: '4.006'
     -
       class: Dist::Zilla::Plugin::AutoPrereqs
       name: '@Author::KENTNL/AutoPrereqs'
