@@ -44,6 +44,7 @@ t/01-sanity.t
 t/array.t
 t/non-coderef.t
 t/sugar.t
+weaver.ini
 xt/author/critic.t
 xt/release/cpan-changes.t
 xt/release/distmeta.t
