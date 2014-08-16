@@ -4,7 +4,7 @@ use warnings;
 
 package MooX::NewDefaults;
 
-our $VERSION = '0.001000';
+our $VERSION = '0.001001';
 
 # ABSTRACT: Alter attribute defaults with less pain
 
@@ -58,7 +58,7 @@ MooX::NewDefaults - Alter attribute defaults with less pain
 
 =head1 VERSION
 
-version 0.001000
+version 0.001001
 
 =head1 SYNOPSIS
 

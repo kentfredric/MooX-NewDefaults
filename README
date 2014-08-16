@@ -2,7 +2,7 @@ NAME
     MooX::NewDefaults - Alter attribute defaults with less pain
 
 VERSION
-    version 0.001000
+    version 0.001001
 
 SYNOPSIS
     Concept and documentation liberally stolen from "MooseX::NewDefaults"
