@@ -21,7 +21,7 @@
          },
          "requires" : {
             "ExtUtils::MakeMaker" : "0",
-            "perl" : "5.008"
+            "perl" : "5.006"
          }
       },
       "develop" : {
@@ -99,7 +99,7 @@
          "requires" : {
             "Carp" : "0",
             "Sub::Exporter::Progressive" : "0",
-            "perl" : "5.008",
+            "perl" : "5.006",
             "strict" : "0",
             "warnings" : "0"
          }
@@ -116,7 +116,7 @@
             "File::Spec" : "0",
             "Moo" : "0",
             "Test::More" : "0",
-            "perl" : "5.008"
+            "perl" : "5.006"
          }
       }
    },
