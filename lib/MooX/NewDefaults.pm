@@ -4,7 +4,7 @@ use warnings;
 
 package MooX::NewDefaults;
 
-our $VERSION = '0.001002';
+our $VERSION = '0.001003';
 
 # ABSTRACT: Alter attribute defaults with less pain
 
