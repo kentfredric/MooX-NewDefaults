@@ -2,6 +2,7 @@ Revision history for MooX-NewDefaults
 
 {{$NEXT}}
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
+ - Make tests more compatible with older Test::More
 
  [Dependencies::Stats]
  - Dependencies changed since 0.001001, see misc/*.deps* for details
