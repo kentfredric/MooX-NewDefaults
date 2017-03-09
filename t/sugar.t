@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More;
+use Test::More tests => 6;
 
 # define two classes, and make sure our sugar works
 
@@ -40,5 +40,3 @@ delete $stash->{one};
 # attribute defaults
 is( TestClassA->new->one, 'original default', 'A has correct default' );
 is( TestClassB->new->one, 'original default', 'B has correct default' );
-
-done_testing;

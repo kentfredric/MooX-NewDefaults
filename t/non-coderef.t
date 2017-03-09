@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More;
+use Test::More tests => 6;
 
 # make sure non-coderefs work
 
@@ -41,5 +41,3 @@ delete $stash->{one};
 # attribute defaults
 is( TestClassA->new->one, 'original default', 'A has correct default' );
 is( TestClassB->new->one, 'original default', 'B has correct default' );
-
-done_testing;
