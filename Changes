@@ -1,6 +1,6 @@
 Revision history for MooX-NewDefaults
 
-0.001002 2017-03-09T16:54:16Z 074240b
+0.001002 2017-03-09T16:57:46Z 89afa36
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
 
  [Dependencies::Stats]
