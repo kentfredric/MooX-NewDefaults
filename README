@@ -1,71 +1,45 @@
-NAME
-    MooX::NewDefaults - Alter attribute defaults with less pain
+MooX::NewDefaults
 
-VERSION
-    version 0.001001
+Ever start using a package from the CPAN, only to discover that it
+requires lots of subclassing and "has '+foo' => (default => ...)"? It's
+not recommended Moose best practice, and it's certainly not the
+prettiest thing ever, either.
 
-SYNOPSIS
-    Concept and documentation liberally stolen from "MooseX::NewDefaults"
+That's where we come in.
 
-        package One;
-        use Moo;
+This package introduces new sugar that you can use in your class,
+"default_for" (as seen above).
 
-        has A => (is => 'ro', default => sub { 'say ahhh' });
-        has B => (is => 'ro', default => sub { 'say whoo' });
+e.g.
 
-        package Two;
-        use Moo;
-        use MooX::NewDefaults;
+    has '+foo' => (default => sub { 'a b c' });
 
-        extends 'One';
+...is the same as:
 
-        # sugar for defining a new default
-        default_for A => sub { 'say oooh' };
+    default_for foo => sub { 'a b c' };
 
-        # this is also legal
-        default_for B => 'say oooh';
+INSTALLATION
 
-DESCRIPTION
-    Ever start using a package from the CPAN, only to discover that it
-    requires lots of subclassing and "has '+foo' => (default => ...)"? It's
-    not recommended Moose best practice, and it's certainly not the
-    prettiest thing ever, either.
+This is a Perl module distribution. It should be installed with whichever
+tool you use to manage your installation of Perl, e.g. any of
 
-    That's where we come in.
+  cpanm .
+  cpan  .
+  cpanp -i .
 
-    This package introduces new sugar that you can use in your class,
-    "default_for" (as seen above).
+Consult http://www.cpan.org/modules/INSTALL.html for further instruction.
+Should you wish to install this module manually, the procedure is
 
-    e.g.
-
-        has '+foo' => (default => sub { 'a b c' });
-
-    ...is the same as:
-
-        default_for foo => sub { 'a b c' };
-
-NEW SUGAR
-  default_for
-    default_for() is a shortcut to extend an attribute to give it a new
-    default; this default value may be any legal value for default options.
-
-        # attribute bar defined elsewhere (e.g. superclass)
-        default_for bar => 'new default';
-
-    ... is the same as:
-
-        has '+bar' => (default => 'new default');
-
-AUTHORS
-    *   Kent Fredric <kentnl@cpan.org>
-
-    *   Chris Weyl <cweyl@alumni.drew.edu>
+  perl Makefile.PL
+  make
+  make test
+  make install
 
 COPYRIGHT AND LICENSE
-    This software is Copyright (c) 2011 by Chris Weyl
-    <cweyl@alumni.drew.edu>.
 
-    This is free software, licensed under:
+This software is Copyright (c) 2011 by Chris Weyl
+<cweyl@alumni.drew.edu>.
 
-      The GNU Lesser General Public License, Version 2.1, February 1999
+This is free software, licensed under:
 
+  The GNU Lesser General Public License, Version 2.1, February 1999

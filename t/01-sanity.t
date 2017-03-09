@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More;
+use Test::More tests => 6;
 
 # a set of tests to ensure that my understanding of this part of the MOP is
 # correct, and that it stays correct :)
@@ -42,5 +42,3 @@ delete $stash->{one};
 # attribute, ancestor attribute
 is $A->one, 'original default';
 is $B->one, 'original default';
-
-done_testing;
