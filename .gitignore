@@ -14,6 +14,7 @@ inc
 META.yml
 *.bak
 MYMETA.*
-.build
+/.build
 releases/
-MooX-NewDefaults-*
+/MooX-NewDefaults-*
+/tmp/
