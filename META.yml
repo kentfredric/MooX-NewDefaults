@@ -22,7 +22,7 @@ name: MooX-NewDefaults
 provides:
   MooX::NewDefaults:
     file: lib/MooX/NewDefaults.pm
-    version: '0.001002'
+    version: '0.001003'
 requires:
   Carp: '0'
   Sub::Exporter::Progressive: '0'
@@ -33,4 +33,4 @@ resources:
   bugtracker: https://github.com/kentnl/MooX-NewDefaults/issues
   homepage: https://github.com/kentnl/MooX-NewDefaults
   repository: https://github.com/kentnl/MooX-NewDefaults.git
-version: '0.001002'
+version: '0.001003'
