@@ -1,3 +1,4 @@
+; vim: syntax=dosini
 name    = MooX-NewDefaults
 author  = Kent Fredric <kentnl@cpan.org>
 author  = Chris Weyl <cweyl@alumni.drew.edu>
@@ -8,7 +9,6 @@ copyright_year   = 2011
 
 [@Author::KENTNL]
 :version         = 2.016000
-git_versions     = 1
 toolkit          = eumm
 toolkit_hardness = soft
 normal_form      = numify
